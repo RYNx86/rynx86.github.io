@@ -1,4 +1,429 @@
-items-center justify-center shrink-0">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F8F5EC">
+    <meta name="description" content="Rayyan Amer — student, hobbyist developer, and curious tinkerer exploring games, technology, robotics, and space.">
+    <title>Rayyan Amer (WackyDink)</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFDF0',
+                        ink: '#0F172A',
+                        popPink: '#FF5C8D',
+                        popOrange: '#FF7A00',
+                        popYellow: '#FFC700',
+                        popGreen: '#00D696',
+                        popCyan: '#00C2FF',
+                        popPurple: '#B15EFF',
+                        accentBlue: '#3B82F6'
+                    },
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        hand: ['"Patrick Hand"', 'cursive'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #F8F5EC;
+            color: #0F172A;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-image: radial-gradient(#94A3B8 2px, transparent 2px);
+            background-size: 28px 28px;
+        }
+
+        /* High-contrast Neo-Brutalist / Cartoon Card Style */
+        .toon-box {
+            background: #ffffff;
+            border: 3.5px solid #0F172A;
+            box-shadow: 6px 6px 0px #0F172A;
+            border-radius: 20px;
+            transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .toon-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 10px 10px 0px #0F172A;
+        }
+
+        .toon-btn {
+            border: 3.5px solid #0F172A;
+            box-shadow: 4px 4px 0px #0F172A;
+            border-radius: 16px;
+            font-weight: 800;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+        }
+
+        .toon-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 7px 7px 0px #0F172A;
+        }
+
+        .toon-btn:active {
+            transform: translateY(2px);
+            box-shadow: 2px 2px 0px #0F172A;
+        }
+
+        .icon-badge {
+            border: 2.5px solid #0F172A;
+            box-shadow: 3px 3px 0px #0F172A;
+            border-radius: 14px;
+        }
+
+        .handwriting {
+            font-family: 'Patrick Hand', cursive;
+        }
+
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .stat-badge {
+            border: 2.5px solid #0F172A;
+            box-shadow: 3px 3px 0px #0F172A;
+            font-weight: 800;
+        }
+
+        /* Small polish pass: same playful neo-brutalist vibe, cleaner rhythm */
+        :root { color-scheme: light; }
+        html { scroll-padding-top: 1.5rem; }
+        body {
+            background-image: radial-gradient(rgba(100, 116, 139, .48) 1.5px, transparent 1.5px);
+            background-size: 26px 26px;
+        }
+        a { -webkit-tap-highlight-color: transparent; }
+        a:focus-visible {
+            outline: 4px dashed #B15EFF;
+            outline-offset: 5px;
+        }
+        .toon-box, .toon-btn { position: relative; }
+        .toon-box:hover { transform: translateY(-3px); }
+        .toon-btn:hover { filter: saturate(1.06); }
+        .icon-badge { flex: 0 0 auto; }
+        .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: .45rem;
+            font-size: .72rem;
+            font-weight: 900;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+        }
+        .mini-dot {
+            width: .5rem; height: .5rem; border: 2px solid #0F172A;
+            border-radius: 999px; background: #00D696; display: inline-block;
+        }
+        .interest-card { min-height: 132px; }
+        .social-card { min-height: 78px; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+        }
+    </style>
+</head>
+<body class="selection:bg-popYellow selection:text-ink min-h-screen pb-24 overflow-x-hidden">
+
+    <div class="max-w-4xl mx-auto px-4 pt-8 md:pt-12 space-y-8">
+
+        <!-- Header Navigation Bar -->
+        <header class="toon-box bg-white p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 border-4">
+            <div class="bg-popYellow text-ink px-5 py-2.5 border-3 border-ink rounded-2xl flex items-center gap-2.5 shadow-[3px_3px_0px_#0F172A]">
+                <!-- Sparkle Vector Icon -->
+                <i data-lucide="sparkles" class="w-6 h-6 shrink-0" aria-hidden="true"></i>
+                <span class="heading-font text-xl sm:text-2xl font-black tracking-tight">RAYYAN'S CORNER</span>
+            </div>
+
+            <nav class="flex flex-wrap gap-2.5 text-sm font-extrabold w-full sm:w-auto justify-center">
+                <a href="#who" class="toon-btn bg-popPink text-white hover:bg-pink-500 px-4 py-2.5 flex items-center gap-2">
+                    <i data-lucide="user-round" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+                    About
+                </a>
+                <a href="#stuff" class="toon-btn bg-popCyan text-ink hover:bg-cyan-300 px-4 py-2.5 flex items-center gap-2">
+                    <i data-lucide="shapes" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+                    Interests
+                </a>
+                <a href="#links" class="toon-btn bg-popOrange text-white hover:bg-orange-500 px-4 py-2.5 flex items-center gap-2">
+                    <i data-lucide="external-link" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+                    Links
+                </a>
+            </nav>
+        </header>
+
+        <section id="who" class="space-y-6">
+            <div class="toon-box bg-white p-6 md:p-9 space-y-6">
+                
+                <!-- Header Info -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-5 border-b-3 border-slate-200 pb-6">
+                    <div>
+                        <p class="section-kicker text-slate-600 mb-2"><span class="mini-dot"></span> Student · Hobbyist Developer</p>
+                        <h1 class="heading-font text-4xl sm:text-5xl font-black text-ink leading-tight tracking-tight">
+                            Rayyan Amer
+                        </h1>
+                        <p class="text-base sm:text-lg text-slate-800 font-extrabold mt-2 flex flex-wrap items-center gap-2">
+                            a.k.a 
+                            <span class="bg-popYellow text-ink px-3 py-1 rounded-xl border-2 border-ink shadow-[2px_2px_0px_#0F172A]">WackyDink</span> 
+                            or 
+                            <span class="bg-popPurple text-white px-3 py-1 rounded-xl border-2 border-ink shadow-[2px_2px_0px_#0F172A]">RYNx86</span>
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap sm:flex-col gap-2.5 shrink-0">
+                        <!-- Birthday Badge -->
+                        <span class="stat-badge bg-popPink text-white text-xs px-3.5 py-2 rounded-xl flex items-center gap-2 justify-center">
+                            <i data-lucide="cake" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+                            17 y/o • 20 Sep
+                        </span>
+                        <!-- Student Badge -->
+                        <span class="stat-badge bg-popGreen text-ink text-xs px-3.5 py-2 rounded-xl flex items-center gap-2 justify-center">
+                            <i data-lucide="graduation-cap" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+                            Pre-Engineering
+                        </span>
+                        <!-- Location Badge -->
+                        <span class="stat-badge bg-popCyan text-ink text-xs px-3.5 py-2 rounded-xl flex items-center gap-2 justify-center">
+                            <i data-lucide="map-pin" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+                            Pakistan
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bio Content -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="md:col-span-2 space-y-4">
+                        <p class="text-slate-900 text-lg leading-relaxed font-semibold">
+                            High school student studying math and physics, building game mechanics on the side, messing around with robotics and circuits, and exploring deep universe theories.
+                        </p>
+                        <p class="handwriting text-2xl text-popPurple font-bold flex items-center gap-2">
+                            <!-- Crescent Moon & Star Vector Icon -->
+                            <i data-lucide="moon-star" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+                            Muslim • Casual Tinkerer • Indie Hobbyist
+                        </p>
+                    </div>
+
+                    <div class="toon-box bg-gradient-to-br from-amber-100 to-amber-200 border-3 border-ink p-5 flex flex-col justify-center items-center text-center space-y-3">
+                        <div class="flex items-center gap-3 text-ink bg-white p-2.5 rounded-xl border-2 border-ink shadow-[2px_2px_0px_#0F172A]">
+                            <!-- Gamepad Icon -->
+                            <i data-lucide="gamepad-2" class="w-6 h-6 shrink-0" aria-hidden="true"></i>
+                            <!-- Microchip Icon -->
+                            <i data-lucide="cpu" class="w-6 h-6 shrink-0" aria-hidden="true"></i>
+                            <!-- Rocket Icon -->
+                            <i data-lucide="rocket" class="w-6 h-6 shrink-0" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-xs font-black text-slate-800 leading-snug">
+                            Building small things, tweaking code loops, and learning as I go.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="stuff" class="space-y-6">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div>
+                    <p class="section-kicker text-slate-600 mb-2"><i data-lucide="heart" class="w-4 h-4" aria-hidden="true"></i> The things that keep me curious</p>
+                    <h2 class="heading-font text-2xl sm:text-3xl font-black text-ink bg-popYellow px-5 py-2 toon-box inline-block">
+                    Things I Care About
+                    </h2>
+                </div>
+                <span class="handwriting text-2xl sm:text-3xl text-slate-700 font-bold hidden sm:inline">my favorite topics</span>
+            </div>
+
+            <!-- Balanced 2-Column Symmetrical Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                <!-- 1. GameDev -->
+                <div class="toon-box interest-card bg-rose-50 p-5 flex items-start gap-4">
+                    <div class="icon-badge bg-popPink text-white w-14 h-14 p-3 flex items-center justify-center shrink-0">
+                        <i data-lucide="gamepad-2" class="w-7 h-7 shrink-0" aria-hidden="true"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="heading-font font-black text-xl text-ink">GameDev</h3>
+                        <p class="text-xs sm:text-sm font-bold text-slate-700 leading-relaxed">
+                            Making small indie mechanics, player loops, and pixel experiments as a side hobby.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Anime -->
+                <div class="toon-box interest-card bg-purple-50 p-5 flex items-start gap-4">
+                    <div class="icon-badge bg-popPurple text-white w-14 h-14 p-3 flex items-center justify-center shrink-0">
+                        <i data-lucide="moon-star" class="w-7 h-7 shrink-0" aria-hidden="true"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="heading-font font-black text-xl text-ink">Anime</h3>
+                        <p class="text-xs sm:text-sm font-bold text-slate-700 leading-relaxed">
+                            Sci-fi, story-heavy series, distinct art styles, and solid soundtracks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Mechatronics / Robotics -->
+                <div class="toon-box interest-card bg-emerald-50 p-5 flex items-start gap-4">
+                    <div class="icon-badge bg-popGreen text-ink w-14 h-14 p-3 flex items-center justify-center shrink-0">
+                        <i data-lucide="bot" class="w-7 h-7 shrink-0" aria-hidden="true"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="heading-font font-black text-xl text-ink">Mechatronics / Robotics</h3>
+                        <p class="text-xs sm:text-sm font-bold text-slate-700 leading-relaxed">
+                            Robotics, microcontrollers, circuits, and tinkering with hardware.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. Tech Exploration -->
+                <div class="toon-box interest-card bg-sky-50 p-5 flex items-start gap-4">
+                    <div class="icon-badge bg-popCyan text-ink w-14 h-14 p-3 flex items-center justify-center shrink-0">
+                        <i data-lucide="code-2" class="w-7 h-7 shrink-0" aria-hidden="true"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="heading-font font-black text-xl text-ink">Tech Exploration</h3>
+                        <p class="text-xs sm:text-sm font-bold text-slate-700 leading-relaxed">
+                            Testing open-source software, Linux setups, and learning cool digital tools.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Reading -->
+                <div class="toon-box interest-card bg-orange-50 p-5 flex items-start gap-4">
+                    <div class="icon-badge bg-popOrange text-white w-14 h-14 p-3 flex items-center justify-center shrink-0">
+                        <i data-lucide="book-open" class="w-7 h-7 shrink-0" aria-hidden="true"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="heading-font font-black text-xl text-ink">Reading</h3>
+                        <p class="text-xs sm:text-sm font-bold text-slate-700 leading-relaxed">
+                            Sci-fi books, physics articles, speculative fiction, and worldbuilding notes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6. Cars -->
+                <div class="toon-box interest-card bg-amber-50 p-5 flex items-start gap-4">
+                    <div class="icon-badge bg-amber-400 text-ink w-14 h-14 p-3 flex items-center justify-center shrink-0">
+                        <i data-lucide="car-front" class="w-7 h-7 shrink-0" aria-hidden="true"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="heading-font font-black text-xl text-ink">Car Enthusiast</h3>
+                        <p class="text-xs sm:text-sm font-bold text-slate-700 leading-relaxed">
+                            Engine mechanics, automotive design, engineering concepts, and custom builds.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Full-Width 7th Interest (Space / Astronomy) -->
+            <div class="toon-box bg-popYellow p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-4">
+                <div class="flex items-center gap-4">
+                    <div class="icon-badge bg-white text-ink w-14 h-14 p-3 flex items-center justify-center shrink-0">
+                        <i data-lucide="orbit" class="w-7 h-7 shrink-0" aria-hidden="true"></i>
+                    </div>
+                    <div class="space-y-0.5">
+                        <h3 class="heading-font font-black text-2xl text-ink">Space & Theories</h3>
+                        <p class="text-xs sm:text-sm font-extrabold text-slate-900">
+                            Astronomy, universe mysteries, sci-fi concepts, and fun conspiracy rabbit holes.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 handwriting text-xl text-ink bg-white px-4 py-1.5 toon-box shrink-0 self-end sm:self-auto font-bold">
+                    <i data-lucide="eye" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+                    the truth is out there!
+                </div>
+            </div>
+
+        </section>
+
+        <section id="links" class="space-y-6 pt-2">
+            <div class="toon-box bg-white p-6 md:p-8 space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b-3 border-slate-200 pb-4">
+                    <div>
+                        <p class="section-kicker text-slate-600 mb-2"><i data-lucide="radio-tower" class="w-4 h-4" aria-hidden="true"></i> Around the internet</p>
+                        <h2 class="heading-font text-2xl sm:text-3xl font-black text-ink">
+                        Find Me Around
+                        </h2>
+                    </div>
+                    <span class="handwriting text-2xl sm:text-3xl text-slate-700 font-bold">say hi or connect</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <!-- 1. Instagram -->
+                    <a href="https://instagram.com/_rayyanamer" target="_blank" rel="noopener noreferrer" class="toon-btn social-card bg-pink-100 p-4 text-ink flex items-center justify-between hover:bg-pink-200">
+                        <div class="flex items-center gap-3">
+                            <div class="icon-badge bg-popPink text-white w-11 h-11 p-2.5 flex items-center justify-center shrink-0">
+                                <img src="https://cdn.simpleicons.org/instagram/ffffff" class="w-5 h-5 shrink-0" alt="" aria-hidden="true">
+                            </div>
+                            <span class="font-extrabold text-base sm:text-lg">Instagram</span>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+                    </a>
+
+                    <!-- 2. Discord -->
+                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="toon-btn social-card bg-purple-100 p-4 text-ink flex items-center justify-between hover:bg-purple-200">
+                        <div class="flex items-center gap-3">
+                            <div class="icon-badge bg-popPurple text-white w-11 h-11 p-2.5 flex items-center justify-center shrink-0">
+                                <img src="https://cdn.simpleicons.org/discord/ffffff" class="w-5 h-5 shrink-0" alt="" aria-hidden="true">
+                            </div>
+                            <span class="font-extrabold text-base sm:text-lg">Discord</span>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+                    </a>
+
+                    <!-- 3. Itch.io (Official Accurate Logo Vector based on reference kit) -->
+                    <a href="https://wackydink.itch.io" target="_blank" rel="noopener noreferrer" class="toon-btn bg-red-100 p-4 text-ink flex items-center justify-between hover:bg-red-200">
+                        <div class="flex items-center gap-3">
+                            <div class="icon-badge bg-rose-500 text-white w-11 h-11 p-2 flex items-center justify-center shrink-0">
+                                <img src="https://cdn.simpleicons.org/itchdotio/ffffff" class="w-6 h-6 shrink-0" alt="" aria-hidden="true">
+                            </div>
+                            <span class="font-extrabold text-base sm:text-lg">Itch.io</span>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+                    </a>
+
+
+                    <!-- 4. GitHub -->
+                    <a href="https://github.com/RYNx86" target="_blank" rel="noopener noreferrer" class="toon-btn social-card bg-emerald-100 p-4 text-ink flex items-center justify-between hover:bg-emerald-200">
+                        <div class="flex items-center gap-3">
+                            <div class="icon-badge bg-popGreen text-ink w-11 h-11 p-2.5 flex items-center justify-center shrink-0">
+                                <img src="https://cdn.simpleicons.org/github/0F172A" class="w-5 h-5 shrink-0" alt="" aria-hidden="true">
+                            </div>
+                            <span class="font-extrabold text-base sm:text-lg">GitHub</span>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+                    </a>
+
+                    <!-- 5. Email (Clickable Email Card with perfectly padded envelope icon) -->
+                    <div class="toon-box bg-amber-100 p-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3 min-w-0 pr-2">
+                            <div class="icon-badge bg-popOrange text-white w-11 h-11 p-2.5 flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+                            </div>
+                            <a href="mailto:muhammad.rayyanamer@gmail.com" class="font-extrabold text-sm sm:text-base text-ink hover:underline truncate">
+                                rayyan@example.com
+                            </a>
+                        </div>
+                        <i data-lucide="link-2" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- 6. YouTube -->
+                    <a href="https://youtube.com/@WackyDink" target="_blank" rel="noopener noreferrer" class="toon-btn social-card bg-orange-100 p-4 text-ink flex items-center justify-between hover:bg-orange-200">
+                        <div class="flex items-center gap-3">
+                            <div class="icon-badge bg-red-600 text-white w-11 h-11 p-2.5 flex items-center justify-center shrink-0">
                                 <img src="https://cdn.simpleicons.org/youtube/ffffff" class="w-5 h-5 shrink-0" alt="" aria-hidden="true">
                             </div>
                             <span class="font-extrabold text-base sm:text-lg">YouTube</span>
